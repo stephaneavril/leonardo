@@ -1,0 +1,28 @@
+// Este es el archivo: prisma/schema.prisma
+
+// 1. Configura la conexión a la base de datos
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL") // Lee la URL de tus variables de entorno en Render
+}
+
+// 2. Configura el generador de Prisma Client
+generator client {
+  provider = "prisma-client-js"
+}
+
+// 3. Define tu modelo de Usuario (aquí creas tu tabla)
+model User {
+  id    String @id @default(cuid()) // ID único
+  email String @unique // Email del usuario, debe ser único
+
+  // Lo dejaremos listo para cuando implementemos login
+  passwordHash String? 
+
+  // Este es el campo clave para "dar de alta/baja"
+  // Por defecto, un usuario nuevo está activo
+  estaActivo Boolean @default(true) 
+
+  // Fecha de creación
+  createdAt DateTime @default(now())
+}
