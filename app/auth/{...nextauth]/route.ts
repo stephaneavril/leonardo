@@ -1,7 +1,7 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { db } from "@/lib/db";
-// import bcrypt from "bcrypt"; 
+import { db } from '../../../lib/db'; // Probablemente necesites tres niveles para salir de app/auth/[...]
+// // import bcrypt from "bcrypt"; 
 
 const handler = NextAuth({
   providers: [
