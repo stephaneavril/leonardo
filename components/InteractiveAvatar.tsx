@@ -26,7 +26,8 @@ const DEFAULT_CONFIG: StartAvatarRequest = {
   quality: AvatarQuality.Low,
   avatarName: "Ann_Doctor_Standing2_public",
   knowledgeId: "13f254b102cf436d8c07b9fb617dbadf",
-  voice:{ "1eca26cb214c4f66976339251282b341",
+  voice:{
+    voiceId: "1eca26cb214c4f66976339251282b341",
     rate: 1.5,
     emotion: VoiceEmotion.EXCITED,
     model: ElevenLabsModel.eleven_flash_v2_5,
