@@ -1,7 +1,7 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { db } from "@/lib/db";
-// // Importa una librería para comparar contraseñas (la instalaremos después)
+import { db } from "../../../lib/db"; // <-- ¡Tres puntos!
+// // // Importa una librería para comparar contraseñas (la instalaremos después)
 // import bcrypt from "bcrypt"; 
 
 const handler = NextAuth({
